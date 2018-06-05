@@ -4,13 +4,14 @@
 		<title>Nspire Labs</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto+Mono" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="landing-pg-styles.css">
-		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Roboto+Mono" rel="stylesheet">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="jquery-3.3.1.min.js"></script>
-	  <script type="text/javascript" src="slick/slick.min.js"></script>
+	  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	</head>
 
 	<body>
@@ -183,7 +184,36 @@
 
 		<div class="blue-bar"></div>
 
-	<script src="javascript/slick.js"></script>
+	<!-- <script src="javascript/slick.js"></script> -->
+	<script>
+		$(document).ready(function(){
+	    $('.profile-box').slick({
+	        centerMode: true,
+	        centerPadding: '60px',
+	        slidesToShow: 3,
+	        responsive: [
+	          {
+	            breakpoint: 768,
+	            settings: {
+	              arrows: false,
+	              centerMode: true,
+	              centerPadding: '40px',
+	              slidesToShow: 3
+	            }
+	          },
+	          {
+	            breakpoint: 480,
+	            settings: {
+	              arrows: false,
+	              centerMode: true,
+	              centerPadding: '40px',
+	              slidesToShow: 1
+	            }
+	          }
+	        ]
+	      });
+		});
+	</script>
 	<!-- <script src="javascript/carosel.js"></script> -->
 
 
